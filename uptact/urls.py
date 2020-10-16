@@ -28,8 +28,9 @@ urlpatterns = [
     path('contacts/<int:pk>/delete/',
          contacts_views.delete_contact,
          name='delete_contact'),
+    path('contacts/forms/', contacts_views.add_contact, name='add_birthday'),
 ]
-
+contacts/forms.py
 if settings.DEBUG:
     import debug_toolbar
     urlpatterns = [
