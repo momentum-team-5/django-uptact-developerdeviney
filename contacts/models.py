@@ -21,3 +21,6 @@ class Contact(models.Model):
     state = USStateField(null=True, blank=True)
     zip_code = USZipCodeField(null=True, blank=True)
     birthday = models.DateField(auto_now=False, null=True, blank=True)
+
+class NotesField(models.Model):
+       note_body = models.TextField(null=True, blank=True, max_length=1000)
