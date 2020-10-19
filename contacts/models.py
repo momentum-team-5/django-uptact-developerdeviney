@@ -23,4 +23,4 @@ class Contact(models.Model):
     birthday = models.DateField(auto_now=False, null=True, blank=True)
 
 class NotesField(models.Model):
-       note_body = models.TextField(null=True, blank=True, max_length=1000)
+       note_body = models.TextField(null=True, blank=True)

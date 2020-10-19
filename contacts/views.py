@@ -51,4 +51,10 @@ def add_note(request, pk):
     contact = get_object_or_404(Contact, pk=pk)
     if request.method == 'GET':
         form = NoteForm()
-        #Not 100% what's next
+   else:
+        form = NoteForm(data=request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect(to='list_contacts')
+
+    return render(request, "contacts/add_contact.html", {"form": form})
